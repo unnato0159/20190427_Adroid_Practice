@@ -3,12 +3,15 @@ package com.tje.a20190427_adroid_practice;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.tje.a20190427_adroid_practice.databinding.ActivitySpinnerPracticeBinding;
 import com.tje.a20190427_adroid_practice.datas.PizzaStore;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpinnerPracticeActivity extends AppCompatActivity {
+
+    ActivitySpinnerPracticeBinding act;
 
     List<PizzaStore>  pizzaStores = new ArrayList<>();
 
