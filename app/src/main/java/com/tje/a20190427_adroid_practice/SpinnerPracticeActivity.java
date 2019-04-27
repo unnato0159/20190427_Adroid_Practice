@@ -44,6 +44,18 @@ public class SpinnerPracticeActivity extends AppCompatActivity {
 
             }
         });
+        act.confirmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 스피너에 어떤 값이 선택외어있는지? 토스트로 출력.
+                //피자 스피너가 선택된 위치를 받아서 저장 .
+                int selectedPosition = act.pizzaStoreSpinner.getSelectedItemPosition();
+                // 그가게의 이름?
+                String selectedPizzaStoreName = pizzaStores.get(selectedPosition).storeName;
+                Toast.makeText(SpinnerPracticeActivity.this,String.format("현재 선택된 가게이름 : %s",selectedPizzaStoreName), Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     void fillPizzaStores(){
